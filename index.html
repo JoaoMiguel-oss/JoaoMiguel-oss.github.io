@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TwinSpark — Ignite Your Potential</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M8 4L20 16L8 28" stroke="url(#g1)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 4L28 16L16 28" stroke="url(#g2)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+            <defs>
+              <linearGradient id="g1" x1="8" y1="4" x2="20" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF3E6C"/>
+                <stop offset="1" stop-color="#FF8FA3"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="16" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FF3E6C"/>
+                <stop offset="1" stop-color="#FFBED0"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">TwinSpark</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#works">Cases</a></li>
+        <li><a href="#pricing">Planos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <a href="#contact" class="btn btn--nav">Fale conosco</a>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <ul>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#works">Cases</a></li>
+        <li><a href="#pricing">Planos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__blob hero__blob--1"></div>
+      <div class="hero__blob hero__blob--2"></div>
+      <div class="hero__grid"></div>
+    </div>
+    <div class="hero__inner container">
+      <div class="hero__badge">
+        <span class="badge-dot"></span>
+        Inovação dupla. Resultado real.
+      </div>
+      <h1 class="hero__title">
+        Duas faíscas.<br/>
+        <span class="gradient-text">Uma explosão</span><br/>
+        de resultados.
+      </h1>
+      <p class="hero__sub">
+        A TwinSpark combina estratégia digital e tecnologia de ponta para transformar negócios que querem mais do que o comum.
+      </p>
+      <div class="hero__ctas">
+        <a href="#services" class="btn btn--primary">Explorar soluções</a>
+        <a href="#works" class="btn btn--ghost">Ver cases <span class="arrow">→</span></a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num" data-target="340">0</span><span>+</span>
+          <span class="stat__label">Projetos entregues</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="98">0</span><span>%</span>
+          <span class="stat__label">Satisfação dos clientes</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="12">0</span><span>+</span>
+          <span class="stat__label">Anos de mercado</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__card hero__card--1">
+        <div class="hcard__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <p class="hcard__title">Performance</p>
+          <p class="hcard__val">+247% ROI médio</p>
+        </div>
+      </div>
+      <div class="hero__card hero__card--2">
+        <div class="hcard__icon hcard__icon--2">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF8FA3" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#FF8FA3" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <p class="hcard__title">Entrega ágil</p>
+          <p class="hcard__val">Sprint de 2 semanas</p>
+        </div>
+      </div>
+      <div class="hero__mockup">
+        <div class="mockup__screen">
+          <div class="mockup__bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup__content">
+            <div class="mc__line mc__line--wide"></div>
+            <div class="mc__line mc__line--mid"></div>
+            <div class="mc__chart">
+              <div class="mc__bar" style="height:40%"></div>
+              <div class="mc__bar" style="height:65%"></div>
+              <div class="mc__bar" style="height:50%"></div>
+              <div class="mc__bar" style="height:80%"></div>
+              <div class="mc__bar" style="height:60%"></div>
+              <div class="mc__bar mc__bar--active" style="height:95%"></div>
+            </div>
+            <div class="mc__kpi">
+              <div class="mc__kpi-item">
+                <div class="mc__kpi-dot"></div>
+                <div>
+                  <div class="mc__kpi-label"></div>
+                  <div class="mc__kpi-val"></div>
+                </div>
+              </div>
+              <div class="mc__kpi-item">
+                <div class="mc__kpi-dot mc__kpi-dot--2"></div>
+                <div>
+                  <div class="mc__kpi-label"></div>
+                  <div class="mc__kpi-val mc__kpi-val--2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STRIP -->
+  <section class="brands">
+    <div class="container">
+      <p class="brands__label">Empresas que confiam na TwinSpark</p>
+      <div class="brands__track">
+        <div class="brands__slide">
+          <span class="brand-name">Nexora</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Vertix</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Orbix</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Lumine</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Crestway</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Zettaflow</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Nexora</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Vertix</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Orbix</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Lumine</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Crestway</span>
+          <span class="brand-sep">·</span>
+          <span class="brand-name">Zettaflow</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about__inner">
+      <div class="about__visual">
+        <div class="about__img-wrap">
+          <div class="about__img-bg"></div>
+          <div class="about__img-card">
+            <div class="about__img-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="24" fill="url(#ag)"/>
+                <path d="M16 24L22 30L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="ag" x1="0" y1="0" x2="48" y2="48">
+                    <stop stop-color="#FF3E6C"/>
+                    <stop offset="1" stop-color="#FF8FA3"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <p class="about__img-card-title">Missão verificada</p>
+            <p class="about__img-card-sub">Resultados mensuráveis em cada entrega</p>
+          </div>
+          <div class="about__orb about__orb--1"></div>
+          <div class="about__orb about__orb--2"></div>
+        </div>
+      </div>
+      <div class="about__text">
+        <div class="section__tag">Quem somos</div>
+        <h2 class="section__title">Acreditamos que toda <span class="gradient-text">grande ideia</span> merece tecnologia à altura</h2>
+        <p class="about__p">A TwinSpark nasceu da fusão entre dois mundos: estratégia de negócios e engenharia de produto. Somos o time que fica ao seu lado do conceito à escala, garantindo que cada decisão tecnológica gere valor real.</p>
+        <div class="about__pillars">
+          <div class="pillar">
+            <div class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <p class="pillar__title">Excelência técnica</p>
+              <p class="pillar__desc">Código limpo, arquitetura sólida e entrega consistente.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#FF3E6C" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <p class="pillar__title">Foco nas pessoas</p>
+              <p class="pillar__desc">Produtos que usuários amam e negócios que crescem.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <p class="pillar__title">Crescimento escalável</p>
+              <p class="pillar__desc">Soluções que acompanham seu ritmo de expansão.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__tag">O que fazemos</div>
+        <h2 class="section__title">Soluções que <span class="gradient-text">movem negócios</span></h2>
+        <p class="section__sub">Da ideia ao produto, do produto à escala. Cada serviço foi desenhado para maximizar o impacto real no seu negócio.</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card service-card--featured">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="white" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Desenvolvimento de Produto Digital</h3>
+          <p>Apps web e mobile construídos com as melhores tecnologias do mercado. Da arquitetura ao deploy, sua ideia ganha vida com qualidade e velocidade.</p>
+          <a href="#contact" class="service-card__link">Saiba mais <span>→</span></a>
+          <div class="service-card__orb"></div>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 20h9" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>UI/UX Design</h3>
+          <p>Interfaces intuitivas e memoráveis que convertem visitantes em clientes apaixonados pela experiência.</p>
+          <a href="#contact" class="service-card__link">Saiba mais <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="#FF3E6C" stroke-width="2"/></svg>
+          </div>
+          <h3>Cloud & DevOps</h3>
+          <p>Infraestrutura robusta, pipelines de CI/CD e automação de processos para escalar com segurança e eficiência.</p>
+          <a href="#contact" class="service-card__link">Saiba mais <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="4" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="20" x2="6" y2="14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Estratégia & Analytics</h3>
+          <p>Dados transformados em decisões. Dashboards, relatórios e inteligência de negócio para crescimento sustentável.</p>
+          <a href="#contact" class="service-card__link">Saiba mais <span>→</span></a>
+        </div>
+        <div class="service-card">
+          <div class="service-card__icon service-card__icon--sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z" stroke="#FF3E6C" stroke-width="2"/><path d="M12 8v4l3 3" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Consultoria Tech</h3>
+          <p>Diagnóstico especializado da sua stack atual e roadmap estratégico para modernização e crescimento sustentável.</p>
+          <a href="#contact" class="service-card__link">Saiba mais <span>→</span></a>
+        </div>
+        <div class="service-card service-card--cta">
+          <p class="service-cta__pre">Não encontrou o que precisa?</p>
+          <h3>Vamos criar juntos</h3>
+          <p>Cada desafio é único. Conte-nos o seu e montaremos uma solução sob medida.</p>
+          <a href="#contact" class="btn btn--primary btn--sm">Falar com especialista</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKS / CASES -->
+  <section class="works section" id="works">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__tag">Cases de sucesso</div>
+        <h2 class="section__title">Resultados que <span class="gradient-text">falam por si</span></h2>
+      </div>
+      <div class="works__grid">
+        <div class="work-card work-card--tall">
+          <div class="work-card__bg work-card__bg--1"></div>
+          <div class="work-card__content">
+            <span class="work-card__tag">E-commerce</span>
+            <h3>Plataforma Nexora</h3>
+            <p>Redesign completo e nova arquitetura que resultou em 180% de aumento nas conversões em 3 meses.</p>
+            <div class="work-card__metrics">
+              <span>+180% conversão</span>
+              <span>·</span>
+              <span>12 semanas</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card__bg work-card__bg--2"></div>
+          <div class="work-card__content">
+            <span class="work-card__tag">SaaS</span>
+            <h3>App Vertix Pro</h3>
+            <p>MVP lançado em 6 semanas com 5.000 usuários no primeiro mês.</p>
+            <div class="work-card__metrics">
+              <span>5k usuários</span>
+              <span>·</span>
+              <span>6 semanas</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card">
+          <div class="work-card__bg work-card__bg--3"></div>
+          <div class="work-card__content">
+            <span class="work-card__tag">Fintech</span>
+            <h3>Dashboard Orbix</h3>
+            <p>Sistema de analytics em tempo real processando 2M+ eventos diários com latência sub-segundo.</p>
+            <div class="work-card__metrics">
+              <span>2M+ eventos/dia</span>
+              <span>·</span>
+              <span>Real-time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__tag">Como trabalhamos</div>
+        <h2 class="section__title">Nosso processo <span class="gradient-text">comprovado</span></h2>
+      </div>
+      <div class="process__steps">
+        <div class="process__step" data-step="01">
+          <div class="process__step-num">01</div>
+          <div class="process__step-body">
+            <h3>Descoberta</h3>
+            <p>Imersão no seu negócio, mercado e objetivos. Entendemos o problema antes de falar em solução.</p>
+          </div>
+        </div>
+        <div class="process__connector"><div></div></div>
+        <div class="process__step" data-step="02">
+          <div class="process__step-num">02</div>
+          <div class="process__step-body">
+            <h3>Estratégia & Design</h3>
+            <p>Planejamento técnico, arquitetura de solução e prototipagem de alta fidelidade com validação contínua.</p>
+          </div>
+        </div>
+        <div class="process__connector"><div></div></div>
+        <div class="process__step" data-step="03">
+          <div class="process__step-num">03</div>
+          <div class="process__step-body">
+            <h3>Desenvolvimento</h3>
+            <p>Sprints ágeis de 2 semanas com entregas incrementais, revisões e feedback constante do cliente.</p>
+          </div>
+        </div>
+        <div class="process__connector"><div></div></div>
+        <div class="process__step" data-step="04">
+          <div class="process__step-num">04</div>
+          <div class="process__step-body">
+            <h3>Lançamento & Escala</h3>
+            <p>Deploy monitorado, otimizações baseadas em dados reais e suporte contínuo para crescimento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__tag">Depoimentos</div>
+        <h2 class="section__title">O que nossos <span class="gradient-text">clientes dizem</span></h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testi-card testi-card--featured">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">"A TwinSpark transformou completamente nossa presença digital. Em 4 meses, triplicamos nossa base de usuários e o produto ficou irreconhecível — para melhor. A equipe tem um nível técnico fora do comum."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar" style="background: linear-gradient(135deg, #FF3E6C, #FF8FA3)">MA</div>
+            <div>
+              <p class="testi-card__name">Mariana Alves</p>
+              <p class="testi-card__role">CEO, Nexora</p>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">"Entregaram nosso MVP em tempo recorde, com qualidade que eu não esperava para o prazo. O processo deles é muito bem estruturado."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar" style="background: linear-gradient(135deg, #2D2D3A, #4A4A5E)">RC</div>
+            <div>
+              <p class="testi-card__name">Rafael Costa</p>
+              <p class="testi-card__role">CTO, Vertix</p>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">"O dashboard que desenvolveram para nós processa milhões de eventos em tempo real. A performance é excepcional. Recomendo sem hesitar."</p>
+          <div class="testi-card__author">
+            <div class="testi-card__avatar" style="background: linear-gradient(135deg, #FF8FA3, #FFBED0)">LS</div>
+            <div>
+              <p class="testi-card__name">Luísa Santos</p>
+              <p class="testi-card__role">Product Manager, Orbix</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__tag">Planos</div>
+        <h2 class="section__title">Investimento <span class="gradient-text">transparente</span></h2>
+        <p class="section__sub">Sem surpresas. Escolha o plano que melhor se encaixa no momento do seu negócio.</p>
+      </div>
+      <div class="pricing__grid">
+        <div class="pricing-card">
+          <div class="pricing-card__top">
+            <span class="pricing-card__plan">Starter</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__amount">4.900</span>
+              <span class="pricing-card__per">/mês</span>
+            </div>
+            <p class="pricing-card__desc">Ideal para startups e projetos em fase inicial que precisam de qualidade com agilidade.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span class="feat-check">✓</span> Até 2 projetos simultâneos</li>
+            <li><span class="feat-check">✓</span> Design + Desenvolvimento</li>
+            <li><span class="feat-check">✓</span> Suporte por email</li>
+            <li><span class="feat-check">✓</span> Relatório mensal</li>
+            <li class="feat-off"><span class="feat-x">✗</span> Consultoria estratégica</li>
+            <li class="feat-off"><span class="feat-x">✗</span> Gerente dedicado</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--full">Começar agora</a>
+        </div>
+        <div class="pricing-card pricing-card--featured">
+          <div class="pricing-card__badge">Mais popular</div>
+          <div class="pricing-card__top">
+            <span class="pricing-card__plan">Growth</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__currency">R$</span>
+              <span class="pricing-card__amount">9.900</span>
+              <span class="pricing-card__per">/mês</span>
+            </div>
+            <p class="pricing-card__desc">Para empresas em crescimento que precisam de uma equipe completa e estratégia integrada.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span class="feat-check">✓</span> Até 5 projetos simultâneos</li>
+            <li><span class="feat-check">✓</span> Design + Dev + Cloud</li>
+            <li><span class="feat-check">✓</span> Suporte prioritário 24/7</li>
+            <li><span class="feat-check">✓</span> Dashboard de analytics</li>
+            <li><span class="feat-check">✓</span> Consultoria estratégica</li>
+            <li class="feat-off"><span class="feat-x">✗</span> Gerente dedicado</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--full">Escolher Growth</a>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-card__top">
+            <span class="pricing-card__plan">Enterprise</span>
+            <div class="pricing-card__price">
+              <span class="pricing-card__amount" style="font-size: 2rem;">Sob consulta</span>
+            </div>
+            <p class="pricing-card__desc">Solução totalmente customizada para grandes empresas com necessidades específicas de escala.</p>
+          </div>
+          <ul class="pricing-card__features">
+            <li><span class="feat-check">✓</span> Projetos ilimitados</li>
+            <li><span class="feat-check">✓</span> Stack completa dedicada</li>
+            <li><span class="feat-check">✓</span> SLA garantido</li>
+            <li><span class="feat-check">✓</span> Relatórios customizados</li>
+            <li><span class="feat-check">✓</span> Consultoria estratégica</li>
+            <li><span class="feat-check">✓</span> Gerente dedicado</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--full">Falar com vendas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-band__bg"></div>
+    <div class="container cta-band__inner">
+      <div class="cta-band__text">
+        <h2>Pronto para a <span class="gradient-text">próxima faísca</span>?</h2>
+        <p>Agende uma conversa gratuita de 30 minutos com nossos especialistas e descubra como a TwinSpark pode transformar seu negócio.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a href="#contact" class="btn btn--primary btn--lg">Agendar conversa gratuita</a>
+        <p class="cta-band__note">Sem compromisso. Sem cartão de crédito.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__info">
+        <div class="section__tag">Contato</div>
+        <h2 class="section__title">Vamos <span class="gradient-text">conversar</span></h2>
+        <p class="contact__p">Conte-nos sobre seu projeto e nosso time entrará em contato em até 24 horas com uma proposta inicial.</p>
+        <div class="contact__items">
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#FF3E6C" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#FF3E6C" stroke-width="2"/></svg>
+            </div>
+            <span>contato@twinspark.io</span>
+          </div>
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.42 2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#FF3E6C" stroke-width="2"/></svg>
+            </div>
+            <span>+55 (11) 99999-0000</span>
+          </div>
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#FF3E6C" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#FF3E6C" stroke-width="2"/></svg>
+            </div>
+            <span>São Paulo, SP — Brasil</span>
+          </div>
+        </div>
+      </div>
+      <form class="contact__form" id="contactForm">
+        <div class="form__row">
+          <div class="form__group">
+            <label>Nome</label>
+            <input type="text" placeholder="Seu nome completo" required />
+          </div>
+          <div class="form__group">
+            <label>Email</label>
+            <input type="email" placeholder="seu@email.com" required />
+          </div>
+        </div>
+        <div class="form__group">
+          <label>Empresa</label>
+          <input type="text" placeholder="Nome da empresa" />
+        </div>
+        <div class="form__group">
+          <label>Serviço de interesse</label>
+          <select>
+            <option value="">Selecione um serviço</option>
+            <option>Desenvolvimento de Produto</option>
+            <option>UI/UX Design</option>
+            <option>Cloud & DevOps</option>
+            <option>Estratégia & Analytics</option>
+            <option>Consultoria Tech</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label>Mensagem</label>
+          <textarea placeholder="Conte-nos sobre seu projeto..." rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Enviar mensagem <span class="arrow">→</span></button>
+        <div class="form__success" id="formSuccess">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF3E6C" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Mensagem enviada! Entraremos em contato em breve.
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="nav__logo">
+          <span class="logo-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M8 4L20 16L8 28" stroke="url(#fg1)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 4L28 16L16 28" stroke="url(#fg2)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+              <defs>
+                <linearGradient id="fg1" x1="8" y1="4" x2="20" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF3E6C"/>
+                  <stop offset="1" stop-color="#FF8FA3"/>
+                </linearGradient>
+                <linearGradient id="fg2" x1="16" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF3E6C"/>
+                  <stop offset="1" stop-color="#FFBED0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-text">TwinSpark</span>
+        </a>
+        <p class="footer__tagline">Duas faíscas. Uma explosão de resultados.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="LinkedIn" class="social-btn">in</a>
+          <a href="#" aria-label="Instagram" class="social-btn">ig</a>
+          <a href="#" aria-label="Twitter/X" class="social-btn">𝕏</a>
+          <a href="#" aria-label="GitHub" class="social-btn">gh</a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <p class="footer__col-title">Empresa</p>
+          <ul>
+            <li><a href="#about">Sobre nós</a></li>
+            <li><a href="#works">Cases</a></li>
+            <li><a href="#process">Processo</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Serviços</p>
+          <ul>
+            <li><a href="#services">Produto Digital</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+            <li><a href="#services">Cloud & DevOps</a></li>
+            <li><a href="#services">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title">Contato</p>
+          <ul>
+            <li><a href="mailto:contato@twinspark.io">contato@twinspark.io</a></li>
+            <li><a href="tel:+5511999990000">+55 (11) 99999-0000</a></li>
+            <li><span>São Paulo, SP</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 TwinSpark. Todos os direitos reservados.</p>
+        <div class="footer__legal">
+          <a href="#">Privacidade</a>
+          <a href="#">Termos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
