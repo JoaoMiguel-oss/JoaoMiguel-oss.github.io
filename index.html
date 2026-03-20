@@ -3,147 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DevProof — Validação Técnica Contextualizada</title>
+<title>Trivio — Validação Técnica Contextualizada</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 
-<style>
-/* ── Override accent to blue/indigo for tech/trust feel ── */
-:root {
-  --accent: #4F6EF7;
-  --accent-light: #8FA4FA;
-  --accent-dim: rgba(79,110,247,0.12);
-  --accent-glow: rgba(79,110,247,0.35);
-  --accent-dark: #3451d1;
-  --grad-start: #4F6EF7;
-  --grad-end: #00CFFF;
-}
-
-/* Gradient text override */
-.gradient-text {
-  background: linear-gradient(120deg, var(--grad-start), var(--grad-end)) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-clip: text !important;
-}
-
-/* Logo SVG paths */
-.logo-icon svg path { stroke: url(#logoGrad) !important; }
-
-/* Hero badge dot */
-.badge-dot { background: var(--accent) !important; }
-
-/* Btn primary */
-.btn--primary {
-  background: linear-gradient(120deg, var(--accent), var(--grad-end)) !important;
-  box-shadow: 0 4px 24px var(--accent-glow) !important;
-}
-.btn--primary:hover {
-  box-shadow: 0 8px 32px var(--accent-glow) !important;
-}
-
-/* Service card featured bg */
-.service-card--featured {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%) !important;
-}
-
-/* Process step numbers */
-.process__step-num { color: var(--accent) !important; border-color: var(--accent-dim) !important; }
-
-/* Check marks */
-.feat-check { color: var(--accent) !important; }
-.testi-card__stars { color: var(--accent) !important; }
-
-/* Pricing featured */
-.pricing-card--featured { border-color: var(--accent) !important; }
-.pricing-card__badge { background: linear-gradient(120deg, var(--accent), var(--grad-end)) !important; color: white !important; }
-
-/* Pillar icons & contact icons */
-.pillar__icon svg path, .pillar__icon svg circle, .pillar__icon svg polyline,
-.contact__item-icon svg path, .contact__item-icon svg circle, .contact__item-icon svg polyline {
-  stroke: var(--accent) !important;
-}
-
-/* Service card icons sm */
-.service-card__icon--sm svg path,
-.service-card__icon--sm svg circle,
-.service-card__icon--sm svg line,
-.service-card__icon--sm svg polyline {
-  stroke: var(--accent) !important;
-}
-
-/* Blobs */
-.hero__blob--1 {
-  background: radial-gradient(circle, rgba(79,110,247,0.18) 0%, transparent 70%) !important;
-}
-.hero__blob--2 {
-  background: radial-gradient(circle, rgba(0,207,255,0.12) 0%, transparent 70%) !important;
-}
-
-/* hcard icon 2 */
-.hcard__icon--2 svg circle, .hcard__icon--2 svg path { stroke: var(--accent-light) !important; }
-
-/* mc bar active */
-.mc__bar--active { background: var(--accent) !important; }
-.mc__kpi-dot { background: var(--accent) !important; }
-.mc__kpi-dot--2 { background: var(--accent-light) !important; }
-
-/* About orbs */
-.about__orb--1 { background: radial-gradient(circle, rgba(79,110,247,0.3) 0%, transparent 70%) !important; }
-.about__orb--2 { background: radial-gradient(circle, rgba(0,207,255,0.2) 0%, transparent 70%) !important; }
-
-/* About img card icon gradient */
-.about__img-icon svg circle { fill: url(#aboutGrad) !important; }
-
-/* work card bgs */
-.work-card__bg--1 { background: linear-gradient(135deg, rgba(79,110,247,0.15), rgba(0,207,255,0.08)) !important; }
-.work-card__bg--2 { background: linear-gradient(135deg, rgba(79,110,247,0.1), rgba(0,207,255,0.05)) !important; }
-.work-card__bg--3 { background: linear-gradient(135deg, rgba(0,207,255,0.12), rgba(79,110,247,0.06)) !important; }
-
-/* testi featured */
-.testi-card--featured { border-color: var(--accent) !important; box-shadow: 0 0 0 1px var(--accent-dim) !important; }
-
-/* cta band */
-.cta-band__bg {
-  background: linear-gradient(135deg, rgba(79,110,247,0.12) 0%, rgba(0,207,255,0.08) 100%) !important;
-}
-
-/* footer social btn */
-.social-btn:hover {
-  background: var(--accent) !important;
-  border-color: var(--accent) !important;
-}
-
-/* Avatar colors */
-.testi-card__avatar:nth-child(1) {
-  background: linear-gradient(135deg, #4F6EF7, #00CFFF) !important;
-}
-
-/* Service card link */
-.service-card__link { color: var(--accent) !important; }
-.service-card--featured .service-card__link { color: white !important; }
-
-/* Work card tag */
-.work-card__tag { background: var(--accent-dim) !important; color: var(--accent) !important; }
-
-/* Process connector */
-.process__connector div { background: linear-gradient(180deg, var(--accent), transparent) !important; }
-
-/* Section tag */
-.section__tag { color: var(--accent) !important; border-color: var(--accent-dim) !important; background: var(--accent-dim) !important; }
-
-/* btn outline */
-.btn--outline { border-color: var(--accent) !important; color: var(--accent) !important; }
-.btn--outline:hover { background: var(--accent-dim) !important; }
-
-/* form focus */
-input:focus, select:focus, textarea:focus { border-color: var(--accent) !important; box-shadow: 0 0 0 3px var(--accent-dim) !important; }
-
-/* nav btn */
-.btn--nav { background: var(--accent) !important; }
-</style>
 </head>
 <body>
 
@@ -158,17 +23,17 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
           <circle cx="26" cy="8" r="4" fill="url(#g1)" opacity="0.8"/>
           <defs>
             <linearGradient id="g1" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#4F6EF7"/>
-              <stop offset="1" stop-color="#00CFFF"/>
+              <stop stop-color="#FF3E6C"/>
+              <stop offset="1" stop-color="#FF8FA3"/>
             </linearGradient>
             <linearGradient id="g2" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#4F6EF7"/>
-              <stop offset="1" stop-color="#00CFFF"/>
+              <stop stop-color="#FF3E6C"/>
+              <stop offset="1" stop-color="#FF8FA3"/>
             </linearGradient>
           </defs>
         </svg>
       </span>
-      <span class="logo-text">DevProof</span>
+      <span class="logo-text">Trivio</span>
     </a>
     <ul class="nav__links">
       <li><a href="#about">Sobre</a></li>
@@ -211,7 +76,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       contratado.
     </h1>
     <p class="hero__sub">
-      A DevProof é uma plataforma de validação técnica contextualizada que elimina falso positivo técnico, reduz o custo de triagem e remunera desenvolvedores pelo esforço de participar.
+      A Trivio é uma plataforma de validação técnica contextualizada que elimina falso positivo técnico, reduz o custo de triagem e remunera desenvolvedores pelo esforço de participar.
     </p>
     <div class="hero__ctas">
       <a href="#contact" class="btn btn--primary">Quero acesso antecipado</a>
@@ -237,7 +102,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
   <div class="hero__visual">
     <div class="hero__card hero__card--1">
       <div class="hcard__icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
       <div>
         <p class="hcard__title">Avaliação por IA</p>
@@ -246,7 +111,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
     </div>
     <div class="hero__card hero__card--2">
       <div class="hcard__icon hcard__icon--2">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="#00CFFF" stroke-width="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="#00CFFF" stroke-width="2"/></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="#FF8FA3" stroke-width="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" stroke="#FF8FA3" stroke-width="2"/></svg>
       </div>
       <div>
         <p class="hcard__title">Bolsa técnica</p>
@@ -294,7 +159,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
 <!-- BRAND STRIP -->
 <section class="brands">
   <div class="container">
-    <p class="brands__label">Empresas piloto em conversa com a DevProof</p>
+    <p class="brands__label">Empresas piloto em conversa com a Trivio</p>
     <div class="brands__track">
       <div class="brands__slide">
         <span class="brand-name">Fintechlab</span>
@@ -338,8 +203,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
               <path d="M16 24L22 30L32 18" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               <defs>
                 <linearGradient id="ag" x1="0" y1="0" x2="48" y2="48">
-                  <stop stop-color="#4F6EF7"/>
-                  <stop offset="1" stop-color="#00CFFF"/>
+                  <stop stop-color="#FF3E6C"/>
+                  <stop offset="1" stop-color="#FF8FA3"/>
                 </linearGradient>
               </defs>
             </svg>
@@ -355,11 +220,11 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       <div class="section__tag">O problema</div>
       <h2 class="section__title">Currículos mentem. Testes genéricos <span class="gradient-text">não funcionam.</span></h2>
       <p class="about__p">Processos seletivos para desenvolvedores sofrem de um problema estrutural: a dificuldade de avaliar competência técnica real de forma eficiente. Currículos são subjetivos e inflados; testes genéricos têm baixa correlação com o trabalho real e consomem tempo de engenheiros seniores — aumentando custo e risco de falso positivo.</p>
-      <p class="about__p">A DevProof atua como uma camada de triagem antes da entrevista técnica tradicional, permitindo que empresas avaliem candidatos por meio de desafios práticos derivados de problemas reais, executados em ambiente isolado, com critérios objetivos e incentivo financeiro ao desenvolvedor.</p>
+      <p class="about__p">A Trivio atua como uma camada de triagem antes da entrevista técnica tradicional, permitindo que empresas avaliem candidatos por meio de desafios práticos derivados de problemas reais, executados em ambiente isolado, com critérios objetivos e incentivo financeiro ao desenvolvedor.</p>
       <div class="about__pillars">
         <div class="pillar">
           <div class="pillar__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#4F6EF7" stroke-width="2" stroke-linejoin="round"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg>
           </div>
           <div>
             <p class="pillar__title">Desafios contextualizados</p>
@@ -368,7 +233,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
         </div>
         <div class="pillar">
           <div class="pillar__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#4F6EF7" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#FF3E6C" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
           <div>
             <p class="pillar__title">Justo para o desenvolvedor</p>
@@ -377,7 +242,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
         </div>
         <div class="pillar">
           <div class="pillar__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <div>
             <p class="pillar__title">Triagem mais eficiente</p>
@@ -409,7 +274,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       </div>
       <div class="service-card">
         <div class="service-card__icon service-card__icon--sm">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h3>Para Desenvolvedores</h3>
         <p>Crie seu perfil técnico, passe por verificação básica e receba um desafio por vaga. Resolva em ambiente isolado e receba a bolsa técnica — independentemente de ser contratado.</p>
@@ -417,7 +282,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       </div>
       <div class="service-card">
         <div class="service-card__icon service-card__icon--sm">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#4F6EF7" stroke-width="2"/><path d="M12 8v4l3 3" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF3E6C" stroke-width="2"/><path d="M12 8v4l3 3" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <h3>Avaliação por IA</h3>
         <p>A solução é pré-avaliada por IA, que analisa abordagem, arquitetura, clareza de raciocínio e riscos técnicos. A empresa recebe um score objetivo e um relatório estruturado.</p>
@@ -425,7 +290,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       </div>
       <div class="service-card">
         <div class="service-card__icon service-card__icon--sm">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="#4F6EF7" stroke-width="2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="#FF3E6C" stroke-width="2"/></svg>
         </div>
         <h3>Ambiente Isolado</h3>
         <p>Os desafios são executados em ambiente controlado, sem acesso a código proprietário ou sistemas de produção, garantindo segurança para ambas as partes.</p>
@@ -433,7 +298,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       </div>
       <div class="service-card">
         <div class="service-card__icon service-card__icon--sm">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="4" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="20" x2="6" y2="14" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="4" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="20" x2="6" y2="14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <h3>Rastreabilidade Total</h3>
         <p>Todas as avaliações são padronizadas, auditáveis e comparáveis. Crie um banco histórico de decisões técnicas e melhore a calibração ao longo do tempo.</p>
@@ -454,7 +319,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
   <div class="container">
     <div class="section__header">
       <div class="section__tag">Diferenciais</div>
-      <h2 class="section__title">Por que a DevProof é <span class="gradient-text">diferente</span></h2>
+      <h2 class="section__title">Por que a Trivio é <span class="gradient-text">diferente</span></h2>
     </div>
     <div class="works__grid">
       <div class="work-card work-card--tall">
@@ -549,7 +414,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
         <div class="testi-card__stars">🚀 MVP</div>
         <p class="testi-card__text">"O MVP está focado em uma única stack (backend JavaScript), um modelo de desafio padronizado e parceria com 3 a 5 empresas piloto. Métricas: tempo até shortlist, taxa de conversão desafio → entrevista e feedback qualitativo das empresas."</p>
         <div class="testi-card__author">
-          <div class="testi-card__avatar" style="background: linear-gradient(135deg, #4F6EF7, #00CFFF)">📍</div>
+          <div class="testi-card__avatar" style="background: linear-gradient(135deg, #FF3E6C, #FF8FA3)">📍</div>
           <div>
             <p class="testi-card__name">Fase atual</p>
             <p class="testi-card__role">Validação com empresas piloto</p>
@@ -569,9 +434,9 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       </div>
       <div class="testi-card">
         <div class="testi-card__stars">🔗 Integração</div>
-        <p class="testi-card__text">Integração nativa com ATS existentes. A DevProof se torna uma camada de inteligência técnica dentro dos fluxos de recrutamento já utilizados pelo mercado.</p>
+        <p class="testi-card__text">Integração nativa com ATS existentes. A Trivio se torna uma camada de inteligência técnica dentro dos fluxos de recrutamento já utilizados pelo mercado.</p>
         <div class="testi-card__author">
-          <div class="testi-card__avatar" style="background: linear-gradient(135deg, #00CFFF, #4F6EF7)">🏗</div>
+          <div class="testi-card__avatar" style="background: linear-gradient(135deg, #FF8FA3, #FF3E6C)">🏗</div>
           <div>
             <p class="testi-card__name">Visão de longo prazo</p>
             <p class="testi-card__role">Infraestrutura de triagem técnica</p>
@@ -655,7 +520,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
   <div class="container cta-band__inner">
     <div class="cta-band__text">
       <h2>Pronto para contratar com <span class="gradient-text">mais precisão</span>?</h2>
-      <p>Converse com a equipe da DevProof e descubra como a validação técnica contextualizada pode transformar o seu processo seletivo ainda neste trimestre.</p>
+      <p>Converse com a equipe da Trivio e descubra como a validação técnica contextualizada pode transformar o seu processo seletivo ainda neste trimestre.</p>
     </div>
     <div class="cta-band__actions">
       <a href="#contact" class="btn btn--primary btn--lg">Falar com a equipe</a>
@@ -674,19 +539,19 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       <div class="contact__items">
         <div class="contact__item">
           <div class="contact__item-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#4F6EF7" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#4F6EF7" stroke-width="2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#FF3E6C" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#FF3E6C" stroke-width="2"/></svg>
           </div>
-          <span>contato@devproof.io</span>
+          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d7e7273697c69725d79786b6d6f72727b337472">[email&#160;protected]</a></span>
         </div>
         <div class="contact__item">
           <div class="contact__item-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.42 2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#4F6EF7" stroke-width="2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.42 2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#FF3E6C" stroke-width="2"/></svg>
           </div>
           <span>+55 (11) 99999-0000</span>
         </div>
         <div class="contact__item">
           <div class="contact__item-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#4F6EF7" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#4F6EF7" stroke-width="2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#FF3E6C" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#FF3E6C" stroke-width="2"/></svg>
           </div>
           <span>São Paulo, SP — Brasil</span>
         </div>
@@ -724,7 +589,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       </div>
       <button type="submit" class="btn btn--primary btn--full">Enviar mensagem <span class="arrow">→</span></button>
       <div class="form__success" id="formSuccess">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#4F6EF7" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#4F6EF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF3E6C" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Mensagem enviada! Entraremos em contato em breve.
       </div>
     </form>
@@ -743,17 +608,17 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
             <circle cx="26" cy="8" r="3.5" fill="url(#fg1)" opacity="0.8"/>
             <defs>
               <linearGradient id="fg1" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#4F6EF7"/>
-                <stop offset="1" stop-color="#00CFFF"/>
+                <stop stop-color="#FF3E6C"/>
+                <stop offset="1" stop-color="#FF8FA3"/>
               </linearGradient>
               <linearGradient id="fg2" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#4F6EF7"/>
-                <stop offset="1" stop-color="#00CFFF"/>
+                <stop stop-color="#FF3E6C"/>
+                <stop offset="1" stop-color="#FF8FA3"/>
               </linearGradient>
             </defs>
           </svg>
         </span>
-        <span class="logo-text">DevProof</span>
+        <span class="logo-text">Trivio</span>
       </a>
       <p class="footer__tagline">Menos ruído técnico. Mais talentos contratados.</p>
       <div class="footer__social">
@@ -784,7 +649,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
       <div class="footer__col">
         <p class="footer__col-title">Contato</p>
         <ul>
-          <li><a href="mailto:contato@devproof.io">contato@devproof.io</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#d9bab6b7adb8adb699bdbcafa9abb6b6bff7b0b6"><span class="__cf_email__" data-cfemail="bfdcd0d1cbdecbd0ffdbdac9cfcdd0d0d991d6d0">[email&#160;protected]</span></a></li>
           <li><a href="tel:+5511999990000">+55 (11) 99999-0000</a></li>
           <li><span>São Paulo, SP</span></li>
         </ul>
@@ -793,15 +658,3 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent) !importa
   </div>
   <div class="footer__bottom">
     <div class="container">
-      <p>© 2025 DevProof. Todos os direitos reservados.</p>
-      <div class="footer__legal">
-        <a href="#">Privacidade</a>
-        <a href="#">Termos de uso</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
