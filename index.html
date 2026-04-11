@@ -14,13 +14,9 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden;cursor:none}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
-
-/* CURSOR */
 #cur{position:fixed;width:10px;height:10px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .25s,height .25s}
 #cur-ring{position:fixed;width:34px;height:34px;border:1.5px solid rgba(255,62,108,.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s}
 #blob-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.45}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:20px 0;transition:background .4s,backdrop-filter .4s,border-color .4s}
 nav.scrolled{background:rgba(12,12,17,.92);backdrop-filter:blur(22px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1160px;margin:0 auto;padding:0 32px;display:flex;align-items:center}
@@ -38,12 +34,8 @@ nav.scrolled{background:rgba(12,12,17,.92);backdrop-filter:blur(22px);border-bot
 .mob-menu ul{display:flex;flex-direction:column;gap:14px}
 .mob-menu a{font-size:16px;font-weight:500;color:var(--muted);transition:color .2s}
 .mob-menu a:hover{color:var(--text)}
-
-/* LAYOUT */
 .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
 .sec{padding:120px 0;position:relative;z-index:2}
-
-/* SHARED HEADING */
 .stag{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:14px}
 .stag::before{content:'';width:20px;height:1px;background:var(--red)}
 h2.stitle{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5.2vw,66px);font-weight:900;line-height:1;text-transform:uppercase;letter-spacing:-1px;margin-bottom:16px}
@@ -51,8 +43,6 @@ h2.stitle em{font-style:normal;background:linear-gradient(110deg,var(--red),var(
 .ssub{font-size:16px;line-height:1.8;color:var(--muted);max-width:540px;margin-bottom:56px}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
-
-/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:130px 0 80px;position:relative;z-index:2}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .hero-badge{display:inline-flex;align-items:center;gap:9px;background:var(--red-dim);border:1px solid rgba(255,62,108,.22);border-radius:30px;padding:5px 15px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--red-lt);margin-bottom:26px;opacity:0;animation:fup .6s .1s forwards}
@@ -84,19 +74,13 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .fc-lbl{font-size:10px;color:var(--muted);letter-spacing:.07em;margin-bottom:2px}
 .fc-val{font-size:14px;font-weight:700}
 @keyframes fup{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-
-/* URGENCY BANNER */
 .urgency{position:relative;z-index:2;background:linear-gradient(90deg,rgba(255,62,108,.1),rgba(255,143,163,.06),rgba(255,62,108,.1));border-top:1px solid rgba(255,62,108,.16);border-bottom:1px solid rgba(255,62,108,.16);padding:13px 32px;text-align:center}
 .urgency a{color:var(--red);font-weight:700;text-decoration:underline;text-underline-offset:3px}
-
-/* TICKER */
 .ticker-wrap{position:relative;z-index:2;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--sf);padding:16px 0}
 .ticker-track{display:flex;white-space:nowrap;animation:tick 30s linear infinite}
 .ti{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding:0 28px;flex-shrink:0}
 .td{color:var(--red)}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* PROBLEM */
 .prob-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .prob-cards{display:flex;flex-direction:column;gap:12px}
 .prob-card{background:var(--sf);border:1px solid var(--border);border-radius:var(--r-lg);padding:26px;display:flex;gap:16px;transition:border-color .3s,transform .3s}
@@ -104,8 +88,6 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .prob-icon{width:42px;height:42px;border-radius:10px;background:var(--red-dim);border:1px solid rgba(255,62,108,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .prob-t{font-size:15px;font-weight:700;margin-bottom:5px}
 .prob-d{font-size:13px;line-height:1.75;color:var(--muted)}
-
-/* HOW IT WORKS */
 .how-tabs{display:flex;gap:4px;margin-bottom:36px;flex-wrap:wrap}
 .how-tab{padding:10px 22px;border-radius:30px;background:transparent;border:1px solid var(--border);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:var(--muted);cursor:none;transition:all .25s}
 .how-tab.active,.how-tab:hover{background:var(--red-dim);border-color:rgba(255,62,108,.3);color:var(--text)}
@@ -120,8 +102,6 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .how-card:hover .how-ico{box-shadow:0 0 18px var(--red-dim)}
 .how-t{font-size:16px;font-weight:700;letter-spacing:-.2px;margin-bottom:8px}
 .how-d{font-size:13px;line-height:1.8;color:var(--muted)}
-
-/* BENTO */
 .bento{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
 .bn{background:var(--sf);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
 .bn:hover{border-color:rgba(255,62,108,.25);transform:translateY(-3px)}
@@ -144,8 +124,6 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .pill{padding:4px 12px;border-radius:20px;border:1px solid var(--border);font-size:11px;font-weight:600;color:var(--muted)}
 .pill.on{border-color:rgba(255,62,108,.4);color:var(--red);background:var(--red-dim)}
 .dots-bg{position:absolute;right:0;bottom:0;width:90px;height:90px;opacity:.07;background-image:radial-gradient(circle,var(--text) 1px,transparent 1px);background-size:11px 11px}
-
-/* PROCESS */
 .proc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .proc-sticky{position:sticky;top:120px}
 .timeline{display:flex;flex-direction:column;gap:4px}
@@ -160,8 +138,6 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .tl-body{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
 .tl.open .tl-body{max-height:160px;padding:0 22px 22px}
 .tl-body p{font-size:13px;line-height:1.9;color:var(--muted)}
-
-/* TESTIMONIALS */
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .testi{background:var(--sf);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px;transition:transform .3s,border-color .3s}
 .testi:hover{transform:translateY(-4px);border-color:rgba(255,62,108,.25)}
@@ -172,16 +148,12 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .t-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0}
 .t-name{font-size:14px;font-weight:700;margin-bottom:2px}
 .t-role{font-size:12px;color:var(--muted)}
-
-/* MVP */
 .mvp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .mvp-card{background:var(--sf);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px;text-align:center;transition:border-color .3s,transform .3s}
 .mvp-card:hover{border-color:rgba(255,62,108,.3);transform:translateY(-3px)}
 .mvp-ico{width:50px;height:50px;border-radius:14px;background:var(--red-dim);border:1px solid rgba(255,62,108,.18);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .mvp-num{font-family:'Barlow Condensed',sans-serif;font-size:50px;font-weight:900;line-height:1;background:linear-gradient(120deg,var(--red),var(--red-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
 .mvp-lbl{font-size:13px;color:var(--muted);line-height:1.6}
-
-/* PRICING */
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px}
 .pc{background:var(--sf);border:1px solid var(--border);border-radius:var(--r-lg);padding:36px;position:relative;transition:transform .3s}
 .pc:hover{transform:translateY(-4px)}
@@ -199,8 +171,6 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .btn-price:hover{border-color:var(--red);background:var(--red-dim)}
 .pc.ft .btn-price{background:linear-gradient(120deg,var(--red),#ff6b8a);border:none;color:#fff}
 .pc.ft .btn-price:hover{box-shadow:0 0 28px var(--red-glow)}
-
-/* CTA */
 .cta-wrap{padding:0 0 100px;position:relative;z-index:2}
 .cta-box{background:var(--sf2);border:1px solid var(--border);border-radius:32px;padding:90px 72px;text-align:center;position:relative;overflow:hidden}
 .cta-box::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,62,108,.09),transparent 65%);pointer-events:none}
@@ -212,8 +182,6 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .cta-input::placeholder{color:var(--muted)}
 .cta-input:focus{border-color:var(--red);box-shadow:0 0 0 3px var(--red-dim)}
 .cta-note{font-size:11px;color:var(--muted);margin-top:14px}
-
-/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px}
 .c-p{font-size:15px;line-height:1.85;color:var(--muted);margin-bottom:32px}
 .c-items{display:flex;flex-direction:column;gap:12px}
@@ -230,8 +198,6 @@ h1.htitle .acc{display:block;background:linear-gradient(110deg,var(--red),var(--
 .btn-sub{padding:14px;border-radius:30px;background:linear-gradient(120deg,var(--red),#ff6b8a);color:#fff;border:none;cursor:none;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;transition:box-shadow .3s,transform .2s}
 .btn-sub:hover{box-shadow:0 0 32px var(--red-glow);transform:translateY(-1px)}
 .form-ok{display:none;align-items:center;gap:10px;font-size:13px;color:var(--red-lt);padding:13px;background:var(--red-dim);border-radius:var(--r);border:1px solid rgba(255,62,108,.2)}
-
-/* FOOTER */
 footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60px 0 0}
 .foot-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:50px}
 .foot-brand p{font-size:13px;line-height:1.8;color:var(--muted);margin-top:14px;max-width:240px}
@@ -247,8 +213,6 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
 .foot-legal{display:flex;gap:18px}
 .foot-legal a{font-size:11px;color:var(--muted);transition:color .2s}
 .foot-legal a:hover{color:var(--red)}
-
-/* RESPONSIVE */
 @media(max-width:900px){
   .hero-grid,.prob-grid,.proc-wrap,.contact-grid{grid-template-columns:1fr}
   .hero-visual{display:none}
@@ -291,7 +255,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
       <li><a href="#problem">O Problema</a></li>
       <li><a href="#how">Como funciona</a></li>
       <li><a href="#diff">Diferenciais</a></li>
-      <li><a href="#pricing">Preços</a></li>
+      <li><a href="#pricing">Precos</a></li>
       <li><a href="#contact">Contato</a></li>
     </ul>
     <a href="#contact" class="btn-nav">Acesso antecipado</a>
@@ -302,7 +266,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
       <li><a href="#problem">O Problema</a></li>
       <li><a href="#how">Como funciona</a></li>
       <li><a href="#diff">Diferenciais</a></li>
-      <li><a href="#pricing">Preços</a></li>
+      <li><a href="#pricing">Precos</a></li>
       <li><a href="#contact">Contato</a></li>
     </ul>
   </div>
@@ -313,13 +277,13 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="hero-badge"><span class="bdot"></span>Triagem técnica contextualizada</div>
+        <div class="hero-badge"><span class="bdot"></span>Triagem tecnica contextualizada</div>
         <h1 class="htitle">
           Pare de perder<br>
           <span class="acc">tempo e dinheiro</span>
           contratando errado.
         </h1>
-        <p class="hsub">A Trivio avalia devs com desafios reais da vaga — não com testes genéricos. Shortlist mais rápido, contratações mais precisas, sem explorar candidatos.</p>
+        <p class="hsub">A Trivio avalia devs com desafios reais da vaga — nao com testes genericos. Shortlist mais rapido, contratacoes mais precisas, sem explorar candidatos.</p>
         <div class="hctas">
           <a href="#contact" class="btn-p">Quero acesso antecipado</a>
           <a href="#how" class="btn-g">Como funciona →</a>
@@ -337,7 +301,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
           <div class="sdiv"></div>
           <div>
             <div class="snum"><span class="count" data-target="3">0</span>x</div>
-            <div class="slbl">Precisão na shortlist</div>
+            <div class="slbl">Precisao na shortlist</div>
           </div>
         </div>
       </div>
@@ -354,9 +318,9 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
             <defs><linearGradient id="rg" x1="0" y1="0" x2="280" y2="280"><stop stop-color="#FF3E6C"/><stop offset="1" stop-color="transparent"/></linearGradient></defs>
           </svg>
         </div>
-        <div class="fc"><div class="fc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="fc-lbl">Score técnico</div><div class="fc-val">Avaliação por IA</div></div></div>
-        <div class="fc"><div class="fc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="#FF8FA3" stroke-width="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2" stroke="#FF8FA3" stroke-width="2"/></svg></div><div><div class="fc-lbl">Bolsa técnica</div><div class="fc-val">Dev sempre pago</div></div></div>
-        <div class="fc"><div class="fc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg></div><div><div class="fc-lbl">Ambiente isolado</div><div class="fc-val">Zero código proprietário</div></div></div>
+        <div class="fc"><div class="fc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><div class="fc-lbl">Score tecnico</div><div class="fc-val">Avaliacao por IA</div></div></div>
+        <div class="fc"><div class="fc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="#FF8FA3" stroke-width="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2" stroke="#FF8FA3" stroke-width="2"/></svg></div><div><div class="fc-lbl">Bolsa tecnica</div><div class="fc-val">Dev sempre pago</div></div></div>
+        <div class="fc"><div class="fc-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg></div><div><div class="fc-lbl">Ambiente isolado</div><div class="fc-val">Zero codigo proprietario</div></div></div>
       </div>
     </div>
   </div>
@@ -364,15 +328,15 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
 
 <!-- URGENCY -->
 <div class="urgency">
-  <span style="font-size:13px;font-weight:600;color:var(--red-lt)">⚡ Acesso antecipado aberto — </span>
-  <span style="font-size:13px;color:var(--muted)">apenas <strong style="color:var(--text)">3 vagas de empresa piloto</strong> disponíveis nesta rodada. </span>
+  <span style="font-size:13px;font-weight:600;color:var(--red-lt)">Acesso antecipado aberto — </span>
+  <span style="font-size:13px;color:var(--muted)">apenas <strong style="color:var(--text)">3 vagas de empresa piloto</strong> disponiveis nesta rodada. </span>
   <a href="#contact" style="font-size:13px">Garantir minha vaga →</a>
 </div>
 
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker-track">
-    <span class="ti">Validação Técnica<span class="td"> ✦ </span></span><span class="ti">Desafios Reais<span class="td"> ✦ </span></span><span class="ti">Avaliação por IA<span class="td"> ✦ </span></span><span class="ti">Bolsa Técnica Garantida<span class="td"> ✦ </span></span><span class="ti">Sem Falso Positivo<span class="td"> ✦ </span></span><span class="ti">ROI desde a 1ª Contratação<span class="td"> ✦ </span></span><span class="ti">Shortlist em Dias<span class="td"> ✦ </span></span><span class="ti">Validação Técnica<span class="td"> ✦ </span></span><span class="ti">Desafios Reais<span class="td"> ✦ </span></span><span class="ti">Avaliação por IA<span class="td"> ✦ </span></span><span class="ti">Bolsa Técnica Garantida<span class="td"> ✦ </span></span><span class="ti">Sem Falso Positivo<span class="td"> ✦ </span></span><span class="ti">ROI desde a 1ª Contratação<span class="td"> ✦ </span></span><span class="ti">Shortlist em Dias<span class="td"> ✦ </span></span>
+    <span class="ti">Validacao Tecnica<span class="td"> * </span></span><span class="ti">Desafios Reais<span class="td"> * </span></span><span class="ti">Avaliacao por IA<span class="td"> * </span></span><span class="ti">Bolsa Tecnica Garantida<span class="td"> * </span></span><span class="ti">Sem Falso Positivo<span class="td"> * </span></span><span class="ti">ROI desde a 1a Contratacao<span class="td"> * </span></span><span class="ti">Shortlist em Dias<span class="td"> * </span></span><span class="ti">Validacao Tecnica<span class="td"> * </span></span><span class="ti">Desafios Reais<span class="td"> * </span></span><span class="ti">Avaliacao por IA<span class="td"> * </span></span><span class="ti">Bolsa Tecnica Garantida<span class="td"> * </span></span><span class="ti">Sem Falso Positivo<span class="td"> * </span></span><span class="ti">ROI desde a 1a Contratacao<span class="td"> * </span></span><span class="ti">Shortlist em Dias<span class="td"> * </span></span>
   </div>
 </div>
 
@@ -382,21 +346,21 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
     <div class="prob-grid">
       <div class="reveal">
         <div class="stag">O custo oculto da triagem</div>
-        <h2 class="stitle">Você está gastando caro<br>pra <em>contratar errado.</em></h2>
-        <p style="font-size:15px;line-height:1.9;color:var(--muted);margin-top:8px">Cada contratação errada de dev custa em média <strong style="color:var(--text)">R$ 30 mil a R$ 80 mil</strong> — entre salário, onboarding e rescisão. O problema começa na triagem: testes genéricos medem o que o candidato decorou, não o que ele sabe fazer de verdade.</p>
+        <h2 class="stitle">Voce esta gastando caro<br>pra <em>contratar errado.</em></h2>
+        <p style="font-size:15px;line-height:1.9;color:var(--muted);margin-top:8px">Cada contratacao errada de dev custa em media <strong style="color:var(--text)">R$ 30 mil a R$ 80 mil</strong> — entre salario, onboarding e rescisao. O problema comeca na triagem: testes genericos medem o que o candidato decorou, nao o que ele sabe fazer de verdade.</p>
       </div>
       <div class="prob-cards reveal">
         <div class="prob-card">
           <div class="prob-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#FF3E6C" stroke-width="2"/><polyline points="14 2 14 8 20 8" stroke="#FF3E6C" stroke-width="2"/></svg></div>
-          <div><div class="prob-t">Currículos inflados</div><div class="prob-d">Candidatos inflam habilidades sabendo que não serão testados de forma prática. Você nunca sabe o que está contratando.</div></div>
+          <div><div class="prob-t">Curriculos inflados</div><div class="prob-d">Candidatos inflam habilidades sabendo que nao serao testados de forma pratica. Voce nunca sabe o que esta contratando.</div></div>
         </div>
         <div class="prob-card">
           <div class="prob-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF3E6C" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="16" x2="12.01" y2="16" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <div><div class="prob-t">Testes genéricos não predizem nada</div><div class="prob-d">LeetCode não prediz performance real — e ainda rouba horas dos seus engenheiros seniores, as pessoas mais caras da empresa.</div></div>
+          <div><div class="prob-t">Testes genericos nao predizem nada</div><div class="prob-d">LeetCode nao prediz performance real — e ainda rouba horas dos seus engenheiros seniors, as pessoas mais caras da empresa.</div></div>
         </div>
         <div class="prob-card">
           <div class="prob-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><line x1="12" y1="1" x2="12" y2="23" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <div><div class="prob-t">Contratação errada custa uma fortuna</div><div class="prob-d">Meses de retrabalho, conflito de time e um novo processo do zero. O falso positivo técnico é o erro mais caro do RH de tech.</div></div>
+          <div><div class="prob-t">Contratacao errada custa uma fortuna</div><div class="prob-d">Meses de retrabalho, conflito de time e um novo processo do zero. O falso positivo tecnico e o erro mais caro do RH de tech.</div></div>
         </div>
       </div>
     </div>
@@ -409,30 +373,30 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
     <div class="reveal">
       <div class="stag">Simples para todos</div>
       <h2 class="stitle">Configure hoje.<br><em>Shortlist em dias.</em></h2>
-      <p class="ssub">Sem implementação complexa. Você publica a vaga, submete o desafio e recebe análise técnica estruturada — em dias, não semanas.</p>
+      <p class="ssub">Sem implementacao complexa. Voce publica a vaga, submete o desafio e recebe analise tecnica estruturada — em dias, nao semanas.</p>
     </div>
     <div class="how-tabs reveal">
-      <button class="how-tab active" onclick="switchTab(this,'tab-e')">🏢 Empresas</button>
-      <button class="how-tab" onclick="switchTab(this,'tab-d')">💻 Desenvolvedores</button>
-      <button class="how-tab" onclick="switchTab(this,'tab-i')">🤖 Avaliação por IA</button>
+      <button class="how-tab active" onclick="switchTab(this,'tab-e')">Empresas</button>
+      <button class="how-tab" onclick="switchTab(this,'tab-d')">Desenvolvedores</button>
+      <button class="how-tab" onclick="switchTab(this,'tab-i')">Avaliacao por IA</button>
     </div>
     <div id="tab-e" class="how-panel active reveal">
-      <div class="how-card"><div class="how-n">01</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#FF3E6C" stroke-width="2"/><polyline points="14 2 14 8 20 8" stroke="#FF3E6C" stroke-width="2"/></svg></div><div class="how-t">Publique a vaga com critérios objetivos</div><div class="how-d">Defina o que você realmente precisa. Critérios técnicos claros atraem os candidatos certos e afastam os errados desde o início.</div></div>
-      <div class="how-card"><div class="how-n">02</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="how-t">Submeta um desafio real</div><div class="how-d">Derivado de um problema que sua empresa já resolveu. Sem acesso a código proprietário — só o problema, em ambiente isolado.</div></div>
-      <div class="how-card"><div class="how-n">03</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="#FF3E6C" stroke-width="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2" stroke="#FF3E6C" stroke-width="2"/></svg></div><div class="how-t">Deposite a bolsa técnica</div><div class="how-d">Taxa da plataforma + bolsa do candidato. Isso atrai perfis sérios e elimina no-show. Você paga por vaga, não por volume.</div></div>
-      <div class="how-card"><div class="how-n">04</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="how-t">Receba o relatório e decida</div><div class="how-d">Score técnico objetivo + relatório estruturado. Você chega na entrevista sabendo exatamente quem está à sua frente.</div></div>
+      <div class="how-card"><div class="how-n">01</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#FF3E6C" stroke-width="2"/><polyline points="14 2 14 8 20 8" stroke="#FF3E6C" stroke-width="2"/></svg></div><div class="how-t">Publique a vaga com criterios objetivos</div><div class="how-d">Defina o que voce realmente precisa. Criterios tecnicos claros atraem os candidatos certos e afastam os errados desde o inicio.</div></div>
+      <div class="how-card"><div class="how-n">02</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="how-t">Submeta um desafio real</div><div class="how-d">Derivado de um problema que sua empresa ja resolveu. Sem acesso a codigo proprietario — so o problema, em ambiente isolado.</div></div>
+      <div class="how-card"><div class="how-n">03</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="7" width="20" height="14" rx="2" stroke="#FF3E6C" stroke-width="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2" stroke="#FF3E6C" stroke-width="2"/></svg></div><div class="how-t">Deposite a bolsa tecnica</div><div class="how-d">Taxa da plataforma + bolsa do candidato. Isso atrai perfis serios e elimina no-show. Voce paga por vaga, nao por volume.</div></div>
+      <div class="how-card"><div class="how-n">04</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><polyline points="22 4 12 14.01 9 11.01" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="how-t">Receba o relatorio e decida</div><div class="how-d">Score tecnico objetivo + relatorio estruturado. Voce chega na entrevista sabendo exatamente quem esta a sua frente.</div></div>
     </div>
     <div id="tab-d" class="how-panel reveal">
-      <div class="how-card"><div class="how-n">01</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#FF3E6C" stroke-width="2"/></svg></div><div class="how-t">Crie seu perfil técnico</div><div class="how-d">Verificação básica de identidade e histórico público. Sem formulários intermináveis — só o que importa para validar quem você é.</div></div>
-      <div class="how-card"><div class="how-n">02</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="how-t">Receba UM desafio por vaga</div><div class="how-d">Sem competição em massa, sem exploração. Apenas você e um desafio real — resolvido no seu ritmo, dentro do tempo estipulado.</div></div>
-      <div class="how-card"><div class="how-n">03</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF3E6C" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Resolva em ambiente seguro</div><div class="how-d">Ambiente isolado, tempo limitado, sem pegadinhas. O desafio mede o que você realmente sabe — não o que decorou para entrevista.</div></div>
-      <div class="how-card"><div class="how-n">04</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><line x1="12" y1="1" x2="12" y2="23" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Receba a bolsa — sempre</div><div class="how-d">Contratado ou não, a bolsa técnica é sua. Seu tempo vale dinheiro e a Trivio garante isso desde o primeiro dia.</div></div>
+      <div class="how-card"><div class="how-n">01</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="#FF3E6C" stroke-width="2"/></svg></div><div class="how-t">Crie seu perfil tecnico</div><div class="how-d">Verificacao basica de identidade e historico publico. Sem formularios interminaveis — so o que importa para validar quem voce e.</div></div>
+      <div class="how-card"><div class="how-n">02</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="how-t">Receba UM desafio por vaga</div><div class="how-d">Sem competicao em massa, sem exploracao. Apenas voce e um desafio real — resolvido no seu ritmo, dentro do tempo estipulado.</div></div>
+      <div class="how-card"><div class="how-n">03</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF3E6C" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Resolva em ambiente seguro</div><div class="how-d">Ambiente isolado, tempo limitado, sem pegadinhas. O desafio mede o que voce realmente sabe — nao o que decorou para entrevista.</div></div>
+      <div class="how-card"><div class="how-n">04</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><line x1="12" y1="1" x2="12" y2="23" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Receba a bolsa — sempre</div><div class="how-d">Contratado ou nao, a bolsa tecnica e sua. Seu tempo vale dinheiro e a Trivio garante isso desde o primeiro dia.</div></div>
     </div>
     <div id="tab-i" class="how-panel reveal">
-      <div class="how-card"><div class="how-n">01</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#FF3E6C" stroke-width="2"/><path d="M9 9h6M9 12h6M9 15h4" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Análise de abordagem e arquitetura</div><div class="how-d">A IA avalia como o candidato pensou o problema — não só se chegou na resposta certa. Raciocínio conta mais que decoreba.</div></div>
-      <div class="how-card"><div class="how-n">02</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="#FF3E6C" stroke-width="2"/><line x1="12" y1="9" x2="12" y2="13" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Identificação de riscos técnicos</div><div class="how-d">Vulnerabilidades, anti-patterns e pontos de atenção mapeados automaticamente. Você sabe onde estão os buracos antes da entrevista.</div></div>
-      <div class="how-card"><div class="how-n">03</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="4" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="20" x2="6" y2="14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Score técnico objetivo e comparável</div><div class="how-d">Padronizado, auditável e comparável entre candidatos. Chega de decisão baseada em feeling — agora é dado.</div></div>
-      <div class="how-card"><div class="how-n">04</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="how-t">Canal privado só quando há interesse</div><div class="how-d">A plataforma libera o contato apenas quando empresa e candidato estão alinhados. Sem spam, sem pressão.</div></div>
+      <div class="how-card"><div class="how-n">01</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#FF3E6C" stroke-width="2"/><path d="M9 9h6M9 12h6M9 15h4" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Analise de abordagem e arquitetura</div><div class="how-d">A IA avalia como o candidato pensou o problema — nao so se chegou na resposta certa. Raciocinio conta mais que decoreba.</div></div>
+      <div class="how-card"><div class="how-n">02</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" stroke="#FF3E6C" stroke-width="2"/><line x1="12" y1="9" x2="12" y2="13" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Identificacao de riscos tecnicos</div><div class="how-d">Vulnerabilidades, anti-patterns e pontos de atencao mapeados automaticamente. Voce sabe onde estao os buracos antes da entrevista.</div></div>
+      <div class="how-card"><div class="how-n">03</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><line x1="18" y1="20" x2="18" y2="10" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="20" x2="12" y2="4" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="20" x2="6" y2="14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div><div class="how-t">Score tecnico objetivo e comparavel</div><div class="how-d">Padronizado, auditavel e comparavel entre candidatos. Chega de decisao baseada em feeling — agora e dado.</div></div>
+      <div class="how-card"><div class="how-n">04</div><div class="how-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#FF3E6C" stroke-width="2" stroke-linejoin="round"/></svg></div><div class="how-t">Canal privado so quando ha interesse</div><div class="how-d">A plataforma libera o contato apenas quando empresa e candidato estao alinhados. Sem spam, sem pressao.</div></div>
     </div>
   </div>
 </section>
@@ -442,14 +406,14 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
   <div class="wrap">
     <div class="reveal">
       <div class="stag">Por que funciona</div>
-      <h2 class="stitle">Tudo que você precisa.<br><em>Nada que te atrasa.</em></h2>
+      <h2 class="stitle">Tudo que voce precisa.<br><em>Nada que te atrasa.</em></h2>
       <p class="ssub">Cada detalhe foi pensado para eliminar atrito — para a empresa e para o desenvolvedor.</p>
     </div>
     <div class="bento reveal">
       <div class="bn">
         <div class="bn-tag">Contexto real</div>
         <div class="bn-title">Desafios derivados<br>da vaga real</div>
-        <div class="bn-desc">Candidatos resolvem problemas reais da sua empresa — não exercícios de algoritmo. A correlação com a performance no trabalho é incomparável.</div>
+        <div class="bn-desc">Candidatos resolvem problemas reais da sua empresa — nao exercicios de algoritmo. A correlacao com a performance no trabalho e incomparavel.</div>
         <div class="mini-bars">
           <div class="mb" style="height:35%;animation-delay:.1s"></div>
           <div class="mb" style="height:55%;animation-delay:.15s"></div>
@@ -464,25 +428,25 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
       </div>
       <div class="bn">
         <div class="bn-tag">Atrai os melhores</div>
-        <div class="bn-title">Dev valorizado<br>desde o início</div>
-        <div class="bn-desc">Devs sérios participam mais quando são valorizados. A bolsa técnica atrai os melhores perfis e elimina no-show.</div>
+        <div class="bn-title">Dev valorizado<br>desde o inicio</div>
+        <div class="bn-desc">Devs serios participam mais quando sao valorizados. A bolsa tecnica atrai os melhores perfis e elimina no-show.</div>
         <div class="status-row"><div class="sdot-g"></div><div class="slbl2">BOLSA GARANTIDA</div></div>
       </div>
       <div class="bn">
-        <div class="bn-tag">Decisão por dados</div>
+        <div class="bn-tag">Decisao por dados</div>
         <div class="bn-title">Score<br>padronizado</div>
-        <div class="bn-desc">Avaliações auditáveis e comparáveis. Chega de decisão baseada em feeling — agora é dado.</div>
-        <div class="pill-row"><span class="pill on">Score</span><span class="pill">Relatório</span><span class="pill">Auditoria</span></div>
+        <div class="bn-desc">Avaliacoes auditaveis e comparaveis. Chega de decisao baseada em feeling — agora e dado.</div>
+        <div class="pill-row"><span class="pill on">Score</span><span class="pill">Relatorio</span><span class="pill">Auditoria</span></div>
       </div>
       <div class="bn">
         <div class="bn-tag">ROI imediato</div>
-        <div class="bn-title">Sênior de volta<br>ao produto</div>
-        <div class="bn-desc">Seu time sênior para de gastar horas em triagem e volta a construir. O ROI aparece na primeira contratação.</div>
+        <div class="bn-title">Senior de volta<br>ao produto</div>
+        <div class="bn-desc">Seu time senior para de gastar horas em triagem e volta a construir. O ROI aparece na primeira contratacao.</div>
       </div>
       <div class="bn">
-        <div class="bn-tag">Segurança jurídica</div>
+        <div class="bn-tag">Seguranca juridica</div>
         <div class="bn-title">IP 100%<br>protegido</div>
-        <div class="bn-desc">Desafios isolados, sem exposição de código proprietário. Segurança jurídica e técnica desde o primeiro dia.</div>
+        <div class="bn-desc">Desafios isolados, sem exposicao de codigo proprietario. Seguranca juridica e tecnica desde o primeiro dia.</div>
         <div class="pill-row"><span class="pill on">Isolado</span><span class="pill">Seguro</span></div>
       </div>
     </div>
@@ -497,25 +461,25 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
         <div class="reveal">
           <div class="stag">Sem complexidade</div>
           <h2 class="stitle">Da vaga ao<br><em>candidato certo</em><br>em 4 passos.</h2>
-          <p style="font-size:15px;line-height:1.85;color:var(--muted);max-width:360px;margin-top:8px">Seu time de RH continua no controle. A Trivio elimina o ruído técnico antes da entrevista — para que você gaste seu tempo só com os candidatos que realmente valem a pena.</p>
+          <p style="font-size:15px;line-height:1.85;color:var(--muted);max-width:360px;margin-top:8px">Seu time de RH continua no controle. A Trivio elimina o ruido tecnico antes da entrevista — para que voce gaste seu tempo so com os candidatos que realmente valem a pena.</p>
         </div>
       </div>
       <div class="timeline reveal">
         <div class="tl open">
           <div class="tl-head" onclick="toggleTl(this)"><div class="tl-num">01</div><div class="tl-name">Empresa publica e submete o desafio</div><div class="tl-arr">↓</div></div>
-          <div class="tl-body"><p>Critérios técnicos claros, desafio isolado, bolsa depositada. Tudo pronto antes do candidato sequer ver a vaga.</p></div>
+          <div class="tl-body"><p>Criterios tecnicos claros, desafio isolado, bolsa depositada. Tudo pronto antes do candidato sequer ver a vaga.</p></div>
         </div>
         <div class="tl">
           <div class="tl-head" onclick="toggleTl(this)"><div class="tl-num">02</div><div class="tl-name">Dev recebe e resolve o desafio</div><div class="tl-arr">↓</div></div>
-          <div class="tl-body"><p>Um desafio, tempo limitado, ambiente isolado. A bolsa técnica já está garantida independente do resultado.</p></div>
+          <div class="tl-body"><p>Um desafio, tempo limitado, ambiente isolado. A bolsa tecnica ja esta garantida independente do resultado.</p></div>
         </div>
         <div class="tl">
-          <div class="tl-head" onclick="toggleTl(this)"><div class="tl-num">03</div><div class="tl-name">IA avalia e gera o relatório</div><div class="tl-arr">↓</div></div>
-          <div class="tl-body"><p>Abordagem, arquitetura, riscos técnicos e score objetivo — tudo em um relatório que você lê em minutos.</p></div>
+          <div class="tl-head" onclick="toggleTl(this)"><div class="tl-num">03</div><div class="tl-name">IA avalia e gera o relatorio</div><div class="tl-arr">↓</div></div>
+          <div class="tl-body"><p>Abordagem, arquitetura, riscos tecnicos e score objetivo — tudo em um relatorio que voce le em minutos.</p></div>
         </div>
         <div class="tl">
-          <div class="tl-head" onclick="toggleTl(this)"><div class="tl-num">04</div><div class="tl-name">Empresa decide com dados, não com feeling</div><div class="tl-arr">↓</div></div>
-          <div class="tl-body"><p>Você lê o relatório, decide se avança e a plataforma libera o canal privado. Sem ruído, sem pressão.</p></div>
+          <div class="tl-head" onclick="toggleTl(this)"><div class="tl-num">04</div><div class="tl-name">Empresa decide com dados, nao com feeling</div><div class="tl-arr">↓</div></div>
+          <div class="tl-body"><p>Voce le o relatorio, decide se avanca e a plataforma libera o canal privado. Sem ruido, sem pressao.</p></div>
         </div>
       </div>
     </div>
@@ -532,18 +496,18 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
     <div class="testi-grid reveal">
       <div class="testi ft">
         <div class="t-stars">★★★★★</div>
-        <p class="t-text">"Diminuiu drasticamente o tempo que meus engenheiros gastavam em triagem. O relatório da IA foi mais útil do que muitas entrevistas que já fiz."</p>
+        <p class="t-text">"Diminuiu drasticamente o tempo que meus engenheiros gastavam em triagem. O relatorio da IA foi mais util do que muitas entrevistas que ja fiz."</p>
         <div class="t-author"><div class="t-av" style="background:linear-gradient(135deg,#FF3E6C,#FF8FA3)">RC</div><div><div class="t-name">Rafael Costa</div><div class="t-role">CTO · Stackhouse</div></div></div>
       </div>
       <div class="testi">
         <div class="t-stars">★★★★★</div>
-        <p class="t-text">"Pela primeira vez cheguei na entrevista técnica com confiança. Já sabia exatamente o nível do candidato antes de abrir a call."</p>
+        <p class="t-text">"Pela primeira vez cheguei na entrevista tecnica com confianca. Ja sabia exatamente o nivel do candidato antes de abrir a call."</p>
         <div class="t-author"><div class="t-av" style="background:linear-gradient(135deg,#2D2D3A,#4A4A5E)">MA</div><div><div class="t-name">Marina Alves</div><div class="t-role">Head of Eng · Vertexio</div></div></div>
       </div>
       <div class="testi">
         <div class="t-stars">★★★★★</div>
-        <p class="t-text">"Recebi a bolsa técnica e fui tratado com respeito. Nunca mais vou participar de processo que não remunera o esforço do candidato."</p>
-        <div class="t-author"><div class="t-av" style="background:linear-gradient(135deg,#FF8FA3,#FFBED0)">LS</div><div><div class="t-name">Lucas Silva</div><div class="t-role">Dev Backend Sênior</div></div></div>
+        <p class="t-text">"Recebi a bolsa tecnica e fui tratado com respeito. Nunca mais vou participar de processo que nao remunera o esforco do candidato."</p>
+        <div class="t-author"><div class="t-av" style="background:linear-gradient(135deg,#FF8FA3,#FFBED0)">LS</div><div><div class="t-name">Lucas Silva</div><div class="t-role">Dev Backend Senior</div></div></div>
       </div>
     </div>
   </div>
@@ -555,47 +519,47 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
     <div class="reveal">
       <div class="stag">Acesso antecipado</div>
       <h2 class="stitle">Seja das primeiras<br><em>empresas a usar.</em></h2>
-      <p class="ssub">Estamos abrindo acesso para um grupo exclusivo de empresas piloto. Quem entra agora molda o produto e garante condições que nunca mais estarão disponíveis.</p>
+      <p class="ssub">Estamos abrindo acesso para um grupo exclusivo de empresas piloto. Quem entra agora molda o produto e garante condicoes que nunca mais estarao disponiveis.</p>
     </div>
     <div class="mvp-grid reveal">
       <div class="mvp-card">
         <div class="mvp-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><polyline points="16 18 22 12 16 6" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <div class="mvp-num">1ª</div>
-        <div class="mvp-lbl">Stack disponível<br><strong style="color:var(--text)">Backend JavaScript</strong></div>
+        <div class="mvp-num">1a</div>
+        <div class="mvp-lbl">Stack disponivel<br><strong style="color:var(--text)">Backend JavaScript</strong></div>
       </div>
       <div class="mvp-card">
         <div class="mvp-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#FF3E6C" stroke-width="2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div class="mvp-num">3–5</div>
-        <div class="mvp-lbl">Vagas de empresa piloto<br><strong style="color:var(--red)">disponíveis agora</strong></div>
+        <div class="mvp-lbl">Vagas de empresa piloto<br><strong style="color:var(--red)">disponiveis agora</strong></div>
       </div>
       <div class="mvp-card">
         <div class="mvp-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF3E6C" stroke-width="2"/><polyline points="12 6 12 12 16 14" stroke="#FF3E6C" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div class="mvp-num">dias</div>
-        <div class="mvp-lbl">Até o seu<br><strong style="color:var(--text)">shortlist qualificado</strong></div>
+        <div class="mvp-lbl">Ate o seu<br><strong style="color:var(--text)">shortlist qualificado</strong></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PREÇOS -->
+<!-- PRECOS -->
 <section class="sec" id="pricing">
   <div class="wrap">
     <div class="reveal">
-      <div class="stag">Preços</div>
-      <h2 class="stitle">Você paga pelo resultado,<br><em>não pelo volume.</em></h2>
-      <p class="ssub">Sem assinatura mensal cara. Sem cobrança por candidato inscrito. Você paga por vaga — e só quando precisa contratar.</p>
+      <div class="stag">Precos</div>
+      <h2 class="stitle">Voce paga pelo resultado,<br><em>nao pelo volume.</em></h2>
+      <p class="ssub">Sem assinatura mensal cara. Sem cobranca por candidato inscrito. Voce paga por vaga — e so quando precisa contratar.</p>
     </div>
     <div class="price-grid reveal">
       <div class="pc">
         <div class="pc-plan">Desenvolvedor</div>
-        <div class="pc-amt" style="font-size:40px;letter-spacing:0">Grátis</div>
-        <div class="pc-per">Participar é sempre gratuito</div>
+        <div class="pc-amt" style="font-size:40px;letter-spacing:0">Gratis</div>
+        <div class="pc-per">Participar e sempre gratuito</div>
         <div class="pc-div"></div>
         <ul class="pc-feats">
-          <li><span class="ck">✓</span> Perfil técnico verificado</li>
+          <li><span class="ck">✓</span> Perfil tecnico verificado</li>
           <li><span class="ck">✓</span> Um desafio por vaga</li>
           <li><span class="ck">✓</span> Ambiente isolado fornecido</li>
-          <li><span class="ck">✓</span> Bolsa técnica garantida</li>
+          <li><span class="ck">✓</span> Bolsa tecnica garantida</li>
           <li><span class="ck">✓</span> Canal direto com a empresa</li>
         </ul>
         <button class="btn-price" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Criar perfil</button>
@@ -607,26 +571,26 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
         <div class="pc-per">Taxa da plataforma + bolsa do candidato</div>
         <div class="pc-div"></div>
         <ul class="pc-feats">
-          <li><span class="ck">✓</span> Publicação da vaga</li>
-          <li><span class="ck">✓</span> Revisão do desafio técnico</li>
-          <li><span class="ck">✓</span> Score + relatório por IA</li>
+          <li><span class="ck">✓</span> Publicacao da vaga</li>
+          <li><span class="ck">✓</span> Revisao do desafio tecnico</li>
+          <li><span class="ck">✓</span> Score + relatorio por IA</li>
           <li><span class="ck">✓</span> Canal privado para entrevista</li>
-          <li><span class="ck">✓</span> Suporte na calibração do desafio</li>
+          <li><span class="ck">✓</span> Suporte na calibracao do desafio</li>
           <li><span class="ck">✓</span> Onboarding dedicado</li>
         </ul>
         <button class="btn-price" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Falar com a equipe</button>
       </div>
       <div class="pc">
         <div class="pc-plan">Piloto</div>
-        <div class="pc-amt" style="font-size:26px;letter-spacing:0;line-height:1.15">Condições<br>especiais</div>
+        <div class="pc-amt" style="font-size:26px;letter-spacing:0;line-height:1.15">Condicoes<br>especiais</div>
         <div class="pc-per">Para as primeiras 3–5 empresas</div>
         <div class="pc-div"></div>
         <ul class="pc-feats">
-          <li><span class="ck">✓</span> Acesso antecipado à plataforma</li>
-          <li><span class="ck">✓</span> Co-criação do modelo de desafio</li>
+          <li><span class="ck">✓</span> Acesso antecipado a plataforma</li>
+          <li><span class="ck">✓</span> Co-criacao do modelo de desafio</li>
           <li><span class="ck">✓</span> Onboarding dedicado</li>
-          <li><span class="ck">✓</span> Desconto permanente pós-lançamento</li>
-          <li><span class="ck">✓</span> Influência direta no roadmap</li>
+          <li><span class="ck">✓</span> Desconto permanente pos-lancamento</li>
+          <li><span class="ck">✓</span> Influencia direta no roadmap</li>
         </ul>
         <button class="btn-price" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Quero ser piloto</button>
       </div>
@@ -638,13 +602,13 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
 <div class="cta-wrap">
   <div class="wrap">
     <div class="cta-box reveal">
-      <div class="cta-title">Chega de contratar<br><span>às cegas.</span></div>
-      <p class="cta-sub">As vagas de tech mais difíceis de fechar merecem uma triagem à altura. Entre para o grupo de empresas piloto e contrate melhor a partir de agora.</p>
+      <div class="cta-title">Chega de contratar<br><span>as cegas.</span></div>
+      <p class="cta-sub">As vagas de tech mais dificeis de fechar merecem uma triagem a altura. Entre para o grupo de empresas piloto e contrate melhor a partir de agora.</p>
       <div class="cta-row">
         <input class="cta-input" type="email" placeholder="seu@email.com">
         <a href="#contact" class="btn-p">Garantir minha vaga →</a>
       </div>
-      <p class="cta-note">⚡ Apenas 3–5 vagas de empresa piloto disponíveis.</p>
+      <p class="cta-note">Apenas 3–5 vagas de empresa piloto disponiveis.</p>
     </div>
   </div>
 </div>
@@ -656,11 +620,11 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
       <div class="reveal">
         <div class="stag">Fale com a equipe</div>
         <h2 class="stitle">Resposta em<br><em>menos de 24h.</em></h2>
-        <p class="c-p">Não espere o próximo processo virar um problema caro. Fale com a equipe agora e descubra como a Trivio funciona para o seu contexto.</p>
+        <p class="c-p">Nao espere o proximo processo virar um problema caro. Fale com a equipe agora e descubra como a Trivio funciona para o seu contexto.</p>
         <div class="c-items">
-          <div class="c-item"><div class="c-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#FF3E6C" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#FF3E6C" stroke-width="2"/></svg></div>contato@trivio.io</div>
-          <div class="c-item"><div class="c-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.42 2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#FF3E6C" stroke-width="2"/></svg></div>+55 (11) 99999-0000</div>
-          <div class="c-item"><div class="c-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#FF3E6C" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#FF3E6C" stroke-width="2"/></svg></div>São Paulo, SP — Brasil</div>
+          <div class="c-item"><div class="c-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#FF3E6C" stroke-width="2"/><polyline points="22,6 12,13 2,6" stroke="#FF3E6C" stroke-width="2"/></svg></div>twinspark0101@gmail.com</div>
+          <div class="c-item"><div class="c-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.42 2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="#FF3E6C" stroke-width="2"/></svg></div>+55 (12) 98276-3114</div>
+          <div class="c-item"><div class="c-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#FF3E6C" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="#FF3E6C" stroke-width="2"/></svg></div>Sao Jose dos Campos, SP — Brasil</div>
         </div>
       </div>
       <form class="form reveal" id="contactForm">
@@ -668,9 +632,9 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
           <div class="fg"><label>Nome</label><input type="text" placeholder="Seu nome completo" required/></div>
           <div class="fg"><label>Email</label><input type="email" placeholder="seu@email.com" required/></div>
         </div>
-        <div class="fg"><label>Empresa (se aplicável)</label><input type="text" placeholder="Nome da empresa"/></div>
+        <div class="fg"><label>Empresa (se aplicavel)</label><input type="text" placeholder="Nome da empresa"/></div>
         <div class="fg">
-          <label>Você é...</label>
+          <label>Voce e...</label>
           <select>
             <option value="">Selecione um perfil</option>
             <option>Empresa — quero ser piloto</option>
@@ -684,7 +648,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
         <button type="submit" class="btn-sub">Enviar mensagem →</button>
         <div class="form-ok" id="formOk">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#FF8FA3" stroke-width="2"/><path d="M9 12l2 2 4-4" stroke="#FF8FA3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Mensagem enviada! Retornamos em até 24h.
+          Mensagem enviada! Retornamos em ate 24h.
         </div>
       </form>
     </div>
@@ -708,10 +672,10 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
           </svg>
           Trivio
         </a>
-        <p>Menos ruído técnico. Mais talentos contratados.</p>
+        <p>Menos ruido tecnico. Mais talentos contratados.</p>
         <div class="foot-socials">
           <a href="#" class="soc">in</a>
-          <a href="#" class="soc">𝕏</a>
+          <a href="#" class="soc">X</a>
           <a href="#" class="soc">gh</a>
         </div>
       </div>
@@ -736,21 +700,20 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:60
       <div>
         <div class="fc-title">Contato</div>
         <div class="flinks">
-          <a href="mailto:contato@trivio.io">contato@trivio.io</a>
-          <a href="tel:+5511999990000">+55 (11) 99999-0000</a>
-          <span style="font-size:13px;color:var(--muted)">São Paulo, SP</span>
+          <a href="mailto:twinspark0101@gmail.com">twinspark0101@gmail.com</a>
+          <a href="tel:+5512982763114">+55 (12) 98276-3114</a>
+          <span style="font-size:13px;color:var(--muted)">Sao Jose dos Campos, SP</span>
         </div>
       </div>
     </div>
     <div class="foot-bot">
-      <div class="foot-copy">© 2025 Trivio. Todos os direitos reservados.</div>
+      <div class="foot-copy">© 2025 Trivio by TwinSpark. Todos os direitos reservados.</div>
       <div class="foot-legal"><a href="#">Privacidade</a><a href="#">Termos</a></div>
     </div>
   </div>
 </footer>
 
 <script>
-/* Cursor */
 const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
 let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
@@ -759,18 +722,12 @@ document.querySelectorAll('a,button,input,select,textarea').forEach(el=>{
   el.addEventListener('mouseenter',()=>{cur.style.width='18px';cur.style.height='18px';ring.style.width='52px';ring.style.height='52px'});
   el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';ring.style.width='34px';ring.style.height='34px'});
 });
-
-/* Nav */
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
 document.getElementById('hamburger').addEventListener('click',()=>document.getElementById('mobMenu').classList.toggle('open'));
-
-/* Reveal */
 const io=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*70);io.unobserve(e.target)}});
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-/* Counter */
 const cio=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
@@ -781,23 +738,17 @@ const cio=new IntersectionObserver(entries=>{
   });
 },{threshold:.5});
 document.querySelectorAll('.count').forEach(el=>cio.observe(el));
-
-/* Tabs */
 function switchTab(btn,id){
   document.querySelectorAll('.how-tab').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.how-panel').forEach(p=>p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById(id).classList.add('active');
 }
-
-/* Accordion */
 function toggleTl(head){
   const item=head.closest('.tl'),isOpen=item.classList.contains('open');
   document.querySelectorAll('.tl').forEach(i=>i.classList.remove('open'));
   if(!isOpen)item.classList.add('open');
 }
-
-/* Form */
 document.getElementById('contactForm').addEventListener('submit',e=>{
   e.preventDefault();
   const ok=document.getElementById('formOk');
@@ -805,8 +756,6 @@ document.getElementById('contactForm').addEventListener('submit',e=>{
   setTimeout(()=>ok.style.display='none',5000);
   e.target.reset();
 });
-
-/* Blob Canvas */
 const canvas=document.getElementById('blob-canvas'),ctx=canvas.getContext('2d');
 let W,H;
 function resize(){W=canvas.width=innerWidth;H=canvas.height=innerHeight}
